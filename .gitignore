@@ -40,6 +40,4 @@ Thumbs.db
 # Logs
 *.log
 
-# Local demo/screenshot artifacts
-demo.jpg
-demo.png
+
