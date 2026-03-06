@@ -59,6 +59,6 @@ Make sure backend is running on `127.0.0.1:8000` before requesting predictions.
 
 ## Demo
 
-![CreditShield Demo](docs/demo.png)
+![CreditShield Demo](demo.jpg)
 
 A result like `74.1% default` means the model estimates about a 74.1% chance that this borrower profile will default, and a 25.9% chance of not defaulting.
