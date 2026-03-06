@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CreditShield</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>CreditShield</h1>
+      <p>Check the probability of loan default</p>
+      <form id="credit-form">
+        <div class="field">
+          <label>Credit Card Utilization (0 - 1)</label>
+          <small class="input-note">
+            Total balance on credit cards and personal lines of credit except real
+            estate debt, divided by total credit limits. Type: percentage.
+          </small>
+          <input
+            type="number"
+            id="RevolvingUtilizationOfUnsecuredLines"
+            step="0.01"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label>Age</label>
+          <small class="input-note">Age of borrower in years. Type: integer.</small>
+          <input type="number" id="age" step="0" required />
+        </div>
+
+        <div class="field">
+          <label>Late Payments (30-59 Days)</label>
+          <small class="input-note">
+            Number of times borrower has been 30-59 days past due, but no worse,
+            in the last 2 years. Type: integer.
+          </small>
+          <input
+            type="number"
+            id="NumberOfTime3059DaysPastDueNotWorse"
+            step="0"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label>Debt Ratio</label>
+          <small class="input-note">
+            Monthly debt payments, alimony, and living costs divided by monthly
+            gross income. Type: percentage.
+          </small>
+          <input type="number" id="DebtRatio" step="0.01" required />
+        </div>
+
+        <div class="field">
+          <label>Monthly Income</label>
+          <small class="input-note">Monthly income. Type: real.</small>
+          <input type="number" id="MonthlyIncome" step="0" required />
+        </div>
+
+        <div class="field">
+          <label>Open Credit Lines / Loans</label>
+          <small class="input-note">
+            Number of open loans and lines of credit. Type: integer.
+          </small>
+          <input
+            type="number"
+            id="NumberOfOpenCreditLinesAndLoans"
+            step="0"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label>Late Payments (90+ Days)</label>
+          <small class="input-note">
+            Number of times borrower has been 90 days or more past due. Type: integer.
+          </small>
+          <input type="number" id="NumberOfTimes90DaysLate" required />
+        </div>
+
+        <div class="field">
+          <label>Real Estate Loans</label>
+          <small class="input-note">
+            Number of mortgage and real estate loans including home equity lines of
+            credit. Type: integer.
+          </small>
+          <input
+            type="number"
+            id="NumberRealEstateLoansOrLines"
+            step="0"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label>Late Payments (60-89 Days)</label>
+          <small class="input-note">
+            Number of times borrower has been 60-89 days past due, but no worse, in
+            the last 2 years. Type: integer.
+          </small>
+          <input
+            type="number"
+            id="NumberOfTime6089DaysPastDueNotWorse"
+            step="0"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label>Number of Dependents</label>
+          <small class="input-note">
+            Number of dependents in family excluding self (spouse, children, etc.).
+            Type: integer.
+          </small>
+          <input type="number" id="NumberOfDependents" step="0" required />
+        </div>
+
+        <button type="button" id="predict-btn">See the Result</button>
+      </form>
+
+      <h2 id="result"></h2>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
